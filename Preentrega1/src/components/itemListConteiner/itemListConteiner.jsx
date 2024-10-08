@@ -1,7 +1,9 @@
 import {useEffect, useState} from 'react';
 import {productos} from '../data/productos';
+import ItemList from '../ItemList/ItemList';
+
 function ItemListContainer(){
-    const [item, setItem] = useState()
+    const [items, setItem] = useState([])
     const getProductos = ()=> new Promise((resolve, reject) =>{
         setTimeout(()=>{
             resolve(productos)
@@ -11,8 +13,10 @@ function ItemListContainer(){
         getProductos()
         .then(resolve=>setItem(resolve))
     },[])
-    return(
-        <div></div>
+    return (
+        <div>
+            <ItemList items={items}/>
+        </div>
     )
 }
 
