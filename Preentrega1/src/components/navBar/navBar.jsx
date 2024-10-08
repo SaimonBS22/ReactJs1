@@ -6,7 +6,7 @@ const NavBar = () =>{
             <h2>Nuestros Productos</h2>
             <div className="contenedorBotones"> 
                 <button>Celulares</button>
-                <button>Electrodomesticos</button>
+                <button>Laptops</button>
                 <button>Televisiones</button>
             </div>
             <CardWidget/>
