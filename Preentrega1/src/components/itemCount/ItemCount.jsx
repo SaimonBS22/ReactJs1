@@ -8,11 +8,11 @@ function ItemCount(){
         setCount(count - 1)
     } 
      return(
-        <div>
+        <div className='conteinerItemCount'>
             <p>{count}</p>
-        <button onClick={restar}>-</button>
-        <button>Agregar al carrito</button>
-        <button onClick={sumar}>+</button>
+        <button onClick={restar} className='botonItemCount'>-</button>
+        <button className='botonCarrito'>Agregar al carrito</button>
+        <button onClick={sumar} className='botonItemCount'>+</button>
         </div>
         
         

@@ -1,6 +1,11 @@
 function Items({item}){
         return(
-            <p>{item.nombre}</p>
+           <div>
+              {item.imagen && (
+                <img key={item.id} className='imagenProducto' src={item.imagen} />
+                )}
+            <p className="parrafoProductos">{item.nombre}</p>
+           </div>
         )
 }
 

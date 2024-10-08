@@ -14,7 +14,7 @@ function ItemListContainer(){
         .then(resolve=>setItem(resolve))
     },[])
     return (
-        <div>
+        <div className='conteinerProductos'>
             <ItemList items={items}/>
         </div>
     )
