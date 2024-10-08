@@ -1,7 +1,8 @@
 const CardWidget = ()=>{
     return(
-        <div>
+        <div className='divCardWidget'>
         <img className='imgCarrito' src="./imagenes/carritoCompras.png"/>
+        0
         </div>
         
         
