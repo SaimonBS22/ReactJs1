@@ -1,4 +1,5 @@
 import CardWidget from "../cardWidget/cardWidget"
+import { Link } from "react-router-dom"
 
 const NavBar = () =>{
     return(
