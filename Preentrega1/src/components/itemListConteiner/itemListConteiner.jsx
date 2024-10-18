@@ -4,7 +4,7 @@ import ItemList from '../ItemList/ItemList';
 
 function ItemListContainer(){
     const [items, setItem] = useState([])
-    const getProductos = ()=> new Promise((resolve, reject) =>{
+    const getProductos = ()=> new Promise((resolve) =>{
         setTimeout(()=>{
             resolve(productos)
         },3000)
