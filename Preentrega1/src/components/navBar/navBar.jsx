@@ -19,9 +19,10 @@ const NavBar = () =>{
                 <Link to='/category/Groceries'>
                     <button className="botonNavBar">Groceries</button>
                 </Link>
+                <CardWidget/>
             </div>
-            <CardWidget/>
         </nav>
+
         
     )
 } 
