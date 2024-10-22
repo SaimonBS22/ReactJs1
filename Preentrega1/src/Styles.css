@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(90, 90, 90);
+    text-decoration: none;
 }
 .divCardWidget{
     position: absolute;
@@ -34,6 +35,7 @@
     gap: 15px;
 }
 .tituloNavBar{
+    color: black;
     margin-top: 15px;
 }
 .botonNavBar{
@@ -97,12 +99,17 @@
 .botonDetalles{
     width: 100px;
     border: 1px black solid;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 .botonDetalles:hover{
-    background-color: black;
+    background-color:black;
     color: white;
 }
 .descripcion{
     width: 175px;
+}
+.contendorDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

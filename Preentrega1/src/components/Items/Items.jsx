@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Items({item}){
         return(
            <div>
@@ -6,8 +7,7 @@ function Items({item}){
             <h3>{item.title}</h3>
             <p className='categoria'>{item.category}</p>
             <p className='descripcion'>{item.description}</p>
-            
-            <button className='botonDetalles'>Ver detalles</button>
+            <Link to={`/item/${item.id}`}><button className='botonDetalles'>Ver Mas</button></Link>
            </div>
         )
 }

@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 const NavBar = () =>{
     return(
         <nav className="contenedorNavBar">
-            <h2 className="tituloNavBar">Nuestros Productos</h2>
+            <Link to='/'>
+                <h2 className="tituloNavBar">MusiUniverso</h2>
+            </Link>
             <div className="contenedorBotones"> 
                 <Link to='/category/beauty'>
                    <button className="botonNavBar">Beauty</button>
