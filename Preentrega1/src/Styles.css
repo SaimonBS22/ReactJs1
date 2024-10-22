@@ -48,11 +48,14 @@
     background-color: rgba(70, 70, 70, 0.508);
 }
 .conteinerProductos{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(5, 2fr);
+    grid-row: 1/6;
+    grid-column: 1/6;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    margin-top: 45px;
+    flex-wrap: wrap;
     gap: 35px;
 }
 .conteinerItemCount{
@@ -87,4 +90,19 @@
 .imagenProducto{
     height: 125px;
     width: 125px;
+}
+.categoria{
+    font-weight: bolder;
+}
+.botonDetalles{
+    width: 100px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+.botonDetalles:hover{
+    background-color: black;
+    color: white;
+}
+.descripcion{
+    width: 175px;
 }
