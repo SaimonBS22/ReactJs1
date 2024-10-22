@@ -108,8 +108,14 @@
 .descripcion{
     width: 175px;
 }
-.contendorDetail{
+.contenedorDetail{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.parrafoDetailPrecio{
+    font-weight: bold;
+    font-size: large;
 }

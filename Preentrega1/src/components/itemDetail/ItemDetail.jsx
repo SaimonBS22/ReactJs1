@@ -3,11 +3,10 @@ function ItemDetail({detail}){
         <div className="contenedorDetail">
             <img src={detail?.thumbnail} className="imgDetail" />
             <h2>{detail?.title}</h2>
-            <h4>{detail?.category}</h4>
             <p>{detail?.description}</p>
-            <p>${detail?.price}</p>
-            <p>Rating:{detail?.rating}</p>
-            <p>Stock:{detail?.stock}</p>
+            <p className="parrafoDetailPrecio">${detail?.price}</p>
+            <p>Rating: <b>{detail?.rating}</b></p>
+            <p>Stock: <b>{detail?.stock}</b></p>
         </div>
     )
 }
