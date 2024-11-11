@@ -121,3 +121,14 @@ hr{
     font-weight: bold;
     font-size: large;
 }
+.parrafoDescripcion{
+    width: 750px;
+}
+.tituloDescripcion{
+    text-decoration: underline;
+    margin-left: 37%;
+}
+.imgDetail{
+    width: 250px;
+    height: 250px;
+}

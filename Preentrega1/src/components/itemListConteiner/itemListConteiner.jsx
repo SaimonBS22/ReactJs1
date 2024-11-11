@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import { getItems, getCategoryItems } from '../../firebase/db';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
@@ -8,13 +9,14 @@ function ItemListContainer(){
 
 
     useEffect(()=>{
-        const url = 'https://dummyjson.com/products';
-        const urlCategory = `https://dummyjson.com/products/category/${id}`
-
-        fetch(id ? urlCategory : url)
-        .then(res => res.json())
-        .then(res => setItem(res.products))
-
+      if(!id){
+        getItems()
+            .then(res => setItem(res))
+      } else{
+        getCategoryItems(id)
+        .then(res => setItem(res))
+      }
+           
     },[id])
     return (
         <div className='conteinerProductos'>

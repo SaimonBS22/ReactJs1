@@ -7,17 +7,17 @@ const NavBar = () =>{
                 <h2 className="tituloNavBar">MusiUniverso</h2>
             </Link>
             <div className="contenedorBotones"> 
-                <Link to='/category/beauty'>
-                   <button className="botonNavBar">Beauty</button>
+                <Link to='/category/celulares'>
+                   <button className="botonNavBar">Celulares</button>
                 </Link>
-                <Link to='/category/Fragrances'>
-                    <button className="botonNavBar">Fragrances</button>
+                <Link to='/category/consola'>
+                    <button className="botonNavBar">Consolas</button>
                 </Link>
-                <Link to='/category/Furniture'>
-                    <button className="botonNavBar">Furniture</button>
+                <Link to='/category/computadora'>
+                    <button className="botonNavBar">Computadoras</button>
                 </Link>
-                <Link to='/category/Groceries'>
-                    <button className="botonNavBar">Groceries</button>
+                <Link to='/category/auriculares'>
+                    <button className="botonNavBar">Auriculares</button>
                 </Link>
                 <CardWidget/>
             </div>
