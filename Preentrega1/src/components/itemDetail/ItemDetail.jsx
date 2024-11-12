@@ -1,3 +1,4 @@
+import ItemCount from "../itemCount/ItemCount"
 function ItemDetail({detail}){
     return(
         <div className="contenedorDetail">
@@ -7,6 +8,7 @@ function ItemDetail({detail}){
             <p>Rating: <b>{detail?.rating}</b></p>
             <p>Stock: <b>{detail?.stock}</b></p>
             <p className="parrafoDescripcion"><b className="tituloDescripcion">Descripcion del Producto:</b><br />{detail?.description}</p>
+            <ItemCount detail={detail}/>
         </div>
     )
 }
