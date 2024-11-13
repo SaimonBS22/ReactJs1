@@ -1,11 +1,13 @@
 import {  useCart } from "../../context/cartContext"
 import { createOrder } from "../../firebase/db"
 import { serverTimestamp } from "firebase/firestore"
+import Swal from 'sweetalert2'
 
 
 function Cart(){
     const { cart, getTotal} = useCart()
-    const handleSubmit = (e) =>{
+
+    const handleSubmit = async(e) =>{
         e.preventDefault()
 
         const form = e.target
@@ -18,23 +20,29 @@ function Cart(){
             dia: serverTimestamp(),
             total: getTotal()
         }
-        console.log(order)
-        
+     const idOrder = await createOrder(order)
+    Swal.fire({
+        title:'Muchas gracias por su compra',
+        text:'este es su orden de ID: ' + idOrder,
+        background:' rgb(90, 90, 90)',
+        color:'white'
+    })
     }
     
     return(
-        <div>
+        <div className="containerCarritoProductos">
             {cart.map(prod => (
-                <div key={prod.id}>
-                    <p>{prod.title} Cantidad:{prod.quantity}</p>
+                <div key={prod.id} className="containerDatosCompra">
+                    <img src={prod.thumbnail} className="imgCarritoProductos"/>
+                    <p className="parrafoCompra"><b>{prod.title} <br />Cantidad: {prod.quantity}</b></p>
                 </div>
             ))}
-            <div>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Nombre" required/>
-                    <input type="email" placeholder="Ejemplo@ejemplo.com" required />
-                    <input type="text" placeholder="Telefono" required/>
-                    <button type="submit">Finalizar Compra</button>
+            <div className="containerForm">
+                <form onSubmit={handleSubmit} className="formulario">
+                    <input className='inputForm' type="text" placeholder="Nombre" required/>
+                    <input className='inputForm' type="email" placeholder="Ejemplo@ejemplo.com" required />
+                    <input className='inputForm' type="text" placeholder="Telefono" required/>
+                    <button className="botonForm" type="submit">Finalizar Compra</button>
                 </form>
             </div>
         </div>

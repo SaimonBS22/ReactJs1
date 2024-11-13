@@ -14,7 +14,7 @@ function CartProvider({ children}){
     const removeCart = () => {setCart([])}
 
     const getTotal = ()=>{
-            const getPrice = cart.map(item => item.price*item.quantity)
+            const getPrice = cart.map(item => item.price * item.quantity)
                 const totalPrice = getPrice.reduce((acc, current) => acc + current, 0)
                 return totalPrice
     }
