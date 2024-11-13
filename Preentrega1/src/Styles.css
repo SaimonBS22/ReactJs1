@@ -132,3 +132,9 @@ hr{
     width: 250px;
     height: 250px;
 }
+.containerLoader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}

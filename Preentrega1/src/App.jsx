@@ -1,9 +1,9 @@
-import NavBar from './components/navBar/navBar.jsx';
-import ItemListContainer from './components/itemListConteiner/ItemListConteiner.jsx';
+import NavBar from './components/navBar/navBar.jsx'
+import ItemListContainer from './components/itemListConteiner/ItemListConteiner.jsx'
 import Cart from './components/cart/cart.jsx'
-import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer.jsx';
-import './styles.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer.jsx'
+import './styles.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-       <NavBar />
+    <NavBar/>
        <br />
        <hr/>
        <Routes>
