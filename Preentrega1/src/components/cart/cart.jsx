@@ -1,11 +1,14 @@
 import {  useCart } from "../../context/cartContext"
 import { createOrder } from "../../firebase/db"
+import { useNavigate } from "react-router-dom"
 import { serverTimestamp } from "firebase/firestore"
 import Swal from 'sweetalert2'
 
 
 function Cart(){
     const { cart, getTotal} = useCart()
+    const navigate = useNavigate();
+    const { removeCart} = useCart()
 
     const handleSubmit = async(e) =>{
         e.preventDefault()
@@ -21,14 +24,28 @@ function Cart(){
             total: getTotal()
         }
      const idOrder = await createOrder(order)
+
+   
     Swal.fire({
         title:'Muchas gracias por su compra',
         text:'este es su orden de ID: ' + idOrder,
         background:' rgb(90, 90, 90)',
-        color:'white'
+        color:'white',
+        confirmButtonText: `Finalizar compra`,
+    }).then((result) =>{
+        if(result.isConfirmed){
+            volverAlInicio()
+            removeCart()
+        }
     })
+
+    const volverAlInicio = () => {
+        navigate('/')
     }
-    
+    }
+
+  
+
     return(
         <div className="containerCarritoProductos">
             {cart.map(prod => (
