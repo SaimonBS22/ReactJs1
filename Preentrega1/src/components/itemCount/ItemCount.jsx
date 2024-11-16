@@ -6,7 +6,7 @@ function ItemCount({detail}){
     const { addToCart, removeCart } = useContext(cartContext)
 
     const sumar = ()=> {setCount(count + 1)}
-    const restar = ()=> {setCount(count - 1)} 
+    const restar = ()=> {setCount(count - 1 ? 0 : 0)} 
     const handleAddToCart = ()=> addToCart({...detail, quantity: count})
 
      return(
